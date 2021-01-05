@@ -37,6 +37,9 @@ public class SenderImp{
     public String getName() {
         return name;
     }
+    public void putAllThings(String a){
+        System.out.println("put this" +a);
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -45,4 +48,6 @@ public class SenderImp{
     public SenderImp(@Qualifier("messageBean")MessageSender messageSender) {
         this.messageSender = messageSender;
     }
+
+
 }

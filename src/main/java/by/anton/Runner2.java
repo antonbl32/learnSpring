@@ -15,6 +15,7 @@ public class Runner2 {
         SenderImp send=context.getBean("senderBean",SenderImp.class);
         System.out.println(send.getMessageSender().getMessage());
         System.out.println(send.getName());
+        send.putAllThings("hello");
         context.close();
 
     }
