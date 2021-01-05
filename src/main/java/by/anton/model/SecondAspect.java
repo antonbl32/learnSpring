@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class SecondAspect {
 
-    @Pointcut("execution(* *(..))") //можно сделать шаблон pointcut и везде использовать или после @before самому указать шаблон
+    @Pointcut("execution(* by.anton*(..))") //можно сделать шаблон pointcut и везде использовать или после @before самому указать шаблон
     public void allMethods() {
     }
 

@@ -22,14 +22,14 @@ public class SenderImp{
 //    public void myMessageSender(MessageSender messageSender) {
 //        this.messageSender=messageSender;
 //    }
-    @PostConstruct
-    public void init(){
-        System.out.println("Init");
-    }
-    @PreDestroy
-    public void Destroy(){
-        System.out.println("Destroy");
-    }
+//    @PostConstruct
+//    public void init(){
+//        System.out.println("Init");
+//    }
+//    @PreDestroy
+//    public void Destroy(){
+//        System.out.println("Destroy");
+//    }
 
     @Value("${myname}")
     private String name;
