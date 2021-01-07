@@ -51,7 +51,7 @@ public class Item {
         System.out.println("-----------------------------------------------");
 
     }
-    public String tryMe(String me){
+    public String tryMe(String me,Item item){
         System.out.println("This method this "+me);
         System.out.println("-----------------------------------------------");
         return "Yes!)";

@@ -10,7 +10,7 @@ public class Runner {
         Item myItem= (Item) context.getBean("itemBean");
         myItem.getMaterialMe();
         myItem.putMaterialMe();
-        System.out.println(myItem.tryMe("Go-Go"));
+        System.out.println(myItem.tryMe("Go-Go",myItem));
         System.out.println("----------------------------------------");
         System.out.println(myItem.getMaterial().getName());
         System.out.println(myItem.getName() + " "+myItem.isElectric());

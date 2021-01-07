@@ -1,4 +1,5 @@
 package by.ant.aspect;
+import by.ant.model.Item;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -13,8 +14,19 @@ public class PutAspect {
     public void doPutMethodAdvice(JoinPoint joinPoint){
         System.out.println("Do this method without put");
         MethodSignature methodSignature=(MethodSignature) joinPoint.getSignature();
-        System.out.println(methodSignature.getMethod() + "  "+methodSignature.getReturnType()+"  "+
-                methodSignature.getParameterNames());
+        if(methodSignature.getName().equals("tryMe")){
+            Object[] obj=joinPoint.getArgs();
+            for (Object ob:obj){
+                if(ob instanceof Item){
+                    System.out.println("Передан итем");
+                }else if(ob instanceof String){
+                    System.out.println("Передан String");
+                }
+
+
+            }
+
+        }
 
     }
 //    @Before("by.anton.model.SecondAspect.allMethods()")
